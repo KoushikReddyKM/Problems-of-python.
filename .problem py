@@ -1,6 +1,83 @@
+#Find BMI
+
+h=float(input()) #in KG
+w=float(input()) #in meters
+BMI=w/(h*h)
+print(BMI)
+
+
+
+#Find simple interst
+
 P=float(input())
-R=float(input())
-T=float(input())
+R=float(input()) #in percentage
+T=float(input()) #in years
 SI=(P * R * T)/100
 print(SI)
+
+
+#Area of circle.
+
+r=float(input())
+area=3.14 * (r**2)
+print(area)
+
+
+#Find Acceleration using distance and time.
+
+d=float(input())
+t=float(input()) 
+a=2*d/(t*t)
+print(a)
+
+
+#Find velocity using mass and force
+
+m=float(input()) #m=mass in KG
+f=float(input()) #f=force
+t=float(input()) #t=time
+v=f*t/m
+print(v)
+
+#Print pyramid (*) pattern
+n=int(input())
+for i in range(n):
+    print(' ' * (n - i - 1) + '*' * (2*i + 1))
+
+
+#Converting kilometers to miles
+km=float(input())
+miles=km*1.6
+print(miles)
+
+#Find Joules
+mass = int(input()) # kg
+velocity = int(input()) #m/s
+KE = (0.5)*(mass)*(velocity)**2
+print(KE)
+
+
+#Distance between two points
+x1,y1 = map(int,input().split())
+x2,y2= map(int,input().split())
+distance = ((y2-y1)**(2)+(x2-x1)**(2))**(1/2)
+print(distance)
+
+
+#Covert integer into dollars,quaters,cents and pennies.
+def convert_cents(total_cents):
+    dollars, cents = divmod(total_cents, 100)
+    quarters, cents = divmod(cents, 25)
+    dimes, cents = divmod(cents, 10)
+    nickels, pennies = divmod(cents, 5)
+    return dollars, quarters, dimes, nickels, pennies
+
+total_cents = int(input())
+dollars, quarters, dimes, nickels, pennies = convert_cents(total_cents)
+print(f"Dollars: {dollars}")
+print(f"Quarters: {quarters}")
+print(f"Dimes: {dimes}")
+print(f"Nickels: {nickels}")
+print(f"Pennies: {pennies}")
+
 
